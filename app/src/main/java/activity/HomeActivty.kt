@@ -126,6 +126,5 @@ class HomeActivty : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        // Refresh cart badge jika ada
     }
 }
