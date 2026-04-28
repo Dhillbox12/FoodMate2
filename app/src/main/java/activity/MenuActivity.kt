@@ -62,12 +62,10 @@ class MenuActivity : AppCompatActivity() {
         chips.forEach { (chip, category) ->
             chip.setOnClickListener {
                 currentCategory = category
-                // Reset semua chip ke unselected
                 chips.keys.forEach { c ->
                     c.setBackgroundResource(R.drawable.bg_chip_unselected)
                     c.setTextColor(resources.getColor(R.color.text_secondary, null))
                 }
-                // Set chip yang dipilih
                 chip.setBackgroundResource(R.drawable.bg_chip_selected)
                 chip.setTextColor(resources.getColor(R.color.text_white, null))
 
