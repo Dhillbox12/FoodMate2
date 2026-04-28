@@ -18,8 +18,6 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // Ambil data food dari intent
         @Suppress("DEPRECATION")
         food = intent.getSerializableExtra("food") as? Food ?: run {
             finish()
@@ -72,7 +70,6 @@ class DetailActivity : AppCompatActivity() {
         }
 
         binding.btnDetailFav.setOnClickListener {
-            // Toggle favorit (UI saja untuk prototype)
             val isFav = binding.btnDetailFav.text == "♥"
             binding.btnDetailFav.text = if (isFav) "♡" else "♥"
             binding.btnDetailFavBottom.text = if (isFav) "♡" else "♥"
