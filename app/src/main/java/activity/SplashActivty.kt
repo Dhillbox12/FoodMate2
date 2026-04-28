@@ -14,7 +14,6 @@ class SplashActivty : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Navigasi ke AuthActivity setelah 2 detik
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, AuthActivty::class.java))
             finish()
