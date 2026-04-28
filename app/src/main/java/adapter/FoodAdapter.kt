@@ -43,7 +43,6 @@ class FoodAdapter(
         holder.tvRating.text = context.getString(R.string.food_rating, food.rating.toString())
         holder.tvRestaurant?.text = context.getString(R.string.food_restaurant, food.restaurant)
 
-        // Set background color for emoji container
         holder.tvEmoji.setBackgroundColor(context.resources.getColor(food.bgColor, null))
 
         holder.cardFood.setOnClickListener { onItemClick(food) }
