@@ -39,7 +39,6 @@ class HomeActivty : AppCompatActivity() {
         val adapter = CategoryAdapter(this, categories) { position ->
             val selected = categories[position].name
             val filtered = FoodData.filterByCategory(selected)
-            // Update popular list saat kategori dipilih
             (binding.rvPopularFoods.adapter as? FoodAdapter)?.updateData(filtered)
         }
 
